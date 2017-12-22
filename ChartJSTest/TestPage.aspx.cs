@@ -49,7 +49,7 @@ namespace ChartJSTest
 
         protected void ShowGraphButton_Click(object sender, EventArgs e)
         {
-            string response = "Response:<br>";
+            string response = "Response:<br />";
             // Loop through table and find out which buttons are pressed
             foreach (TableRow tr in SensorTable.Rows)
             {
@@ -67,7 +67,7 @@ namespace ChartJSTest
                         {
                             if (li.Selected)
                             {
-                                response += addr + " has option " + li.Text + " checked.<br>";
+                                response += addr + " has option " + li.Text + " checked.<br />";
                                 // read out database and sort values into nessesary objects to create json chart data
                                 // change javascript code stuffs here to create chart with chart.js
                             }
