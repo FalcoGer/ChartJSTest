@@ -5,6 +5,19 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
+// TODO:
+/*
+retain checkbox status when searching/submitting
+add chart.js
+  make dynamic graphs with chart.js
+  create class for chart.js that can simply be deserialized into chart.js control json
+make it stop resetting the list when clicking another button.
+  why does it do that anyway?
+    find out
+    fix it
+make things pretty
+*/
+
 namespace ChartJSTest
 {
     public partial class TestPage : System.Web.UI.Page
@@ -69,9 +82,13 @@ namespace ChartJSTest
         {
             // TODO: Retain check box statuses
             // need to save check box status, or entire check box list, maybe in sensor object
+            // maybe in own dictionary (key = addr, val = check box list)
+            // in any case it needs to be decoupled from the form
 
             // clear the table
+            // this deletes checkboxes. maybe have a separate dictionary for those?
             SensorTable.Rows.Clear();
+
             // create header
             TableRow tr = new TableRow();
             tr.Cells.Add(new TableCell() { Text = "Addr" });
